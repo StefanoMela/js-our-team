@@ -57,7 +57,7 @@ const team = [
 
 console.log(team);
 
-// MILESTONE 1
+// MILESTONE 2
 
 const stringToWrite = document.getElementById("mega-string");
 
@@ -70,7 +70,7 @@ for (let i = 0; i < team.length; i++) {
 };
 
 
-// MILESTONE 2
+// MILESTONE 2.1
 
 const firstMemberName = document.getElementById("first-member-name");
 const firstMemberRole = document.getElementById("first-member-role");

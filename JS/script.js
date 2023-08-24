@@ -80,8 +80,6 @@ for (let i = 0; i < team.length; i++) {
                     <p class="card-text">${team[i].ruolo}</p>
             </div>
     </div>`
-
-    console.log(team[i].foto);
 };
 
 

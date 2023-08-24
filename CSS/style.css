@@ -7,3 +7,9 @@
     max-width: 70%;
     margin: 0 auto;
 }
+
+img {
+
+    max-width: 300px;
+    aspect-ratio: 1;
+}

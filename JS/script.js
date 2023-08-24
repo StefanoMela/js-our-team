@@ -57,21 +57,23 @@ const team = [
 
 // MILESTONE 1
 
-for (let i in team) {
-    let member = team[i]
-    console.log("Nome: " + member.nome)
-    console.log("Ruolo: " + member.ruolo)
-    console.log("Foto: " + member.foto)
-};
+for (const teamMember of team) {
+
+    console.log("Nome: " + teamMember.nome)
+    console.log("Ruolo: " + teamMember.ruolo)
+    console.log("Foto: " + teamMember.foto)
+}
 
 // MILESTONE 2 + BONUS
 
 const stringContainer = document.getElementById("mega-string");
 const containerToWrite = document.getElementById("main-container");
 
-for (let i = 0; i < team.length; i++) {
 
-    console.log(team[i]);
+/**
+ *  // PRIMO MODO
+
+for (let i = 0; i < team.length; i++) {
 
     let stringToWrite = document.createElement("div");
     stringToWrite.innerHTML += `
@@ -79,7 +81,6 @@ for (let i = 0; i < team.length; i++) {
         <h5>Ruolo: ${team[i].ruolo}</h5>
         <span><img src="./img/${team[i].foto}"></span>
     `
-    stringToWrite.classList.add
     stringContainer.appendChild(stringToWrite);
 
     containerToWrite.innerHTML += `
@@ -91,3 +92,49 @@ for (let i = 0; i < team.length; i++) {
             </div>
     </div>`
 };
+
+ *  // SECONDO MODO
+
+for (const teamMember of team) {
+
+    const stringToWrite = document.createElement("div");
+     stringToWrite.innerHTML += `
+         <h4>Nome: ${teamMember.nome}</h4>
+         <h5>Ruolo: ${teamMember.ruolo}</h5>
+         <span><img src="./img/${teamMember.foto}"></span>
+     `
+     stringContainer.appendChild(stringToWrite);
+
+     containerToWrite.innerHTML += `
+     <div class="card my-5 m-3">
+         <img src="./img/${teamMember.foto}">
+             <div class="card-body">
+                 <h5 class="card-title">${teamMember.nome}</h5>
+                     <p class="card-text">${teamMember.ruolo}</p>
+             </div>
+     </div>`
+}
+*/
+
+// TERZO MODO -- il più corretto ?
+
+for (let i in team) {
+    let members = team[i];
+    const stringToWrite = document.createElement("div");
+      stringToWrite.innerHTML += `
+          <h4>Nome: ${members.nome}</h4>
+          <h5>Ruolo: ${members.ruolo}</h5>
+          <span><img src="./img/${members.foto}"></span>
+      `
+      stringContainer.appendChild(stringToWrite);
+
+          containerToWrite.innerHTML += `
+      <div class="card my-5 m-3">
+          <img src="./img/${members.foto}">
+              <div class="card-body">
+                  <h5 class="card-title">${members.nome}</h5>
+                      <p class="card-text">${members.ruolo}</p>
+              </div>
+      </div>`
+    
+}

@@ -21,37 +21,37 @@ const team = [
     {
         nome: "Wayne Barnett",
         ruolo: "Founder & CEO",
-        foto: "./img/wayne-barnett-founder-ceo.jpg",
+        foto: "wayne-barnett-founder-ceo.jpg",
     },
 
     {
         nome: "Angela Caroll",
         ruolo: "Chief Editor",
-        foto: "./img/angela-caroll-chief-editor.jpg",
+        foto: "angela-caroll-chief-editor.jpg",
     },
 
     {
         nome: "Walter Gordon",
         ruolo: "Office Manager",
-        foto: "./img/walter-gordon-office-manager.jpg",
+        foto: "walter-gordon-office-manager.jpg",
     },
 
     {
         nome: "Angela Lopez",
         ruolo: "Social Media Manager",
-        foto: "./img/angela-lopez-social-media-manager.jpg",
+        foto: "angela-lopez-social-media-manager.jpg",
     },
 
     {
         nome: "Scott Estrad",
         ruolo: "Developer",
-        foto: "./img/scott-estrada-developer.jpg",
+        foto: "scott-estrada-developer.jpg",
     },
 
     {
         nome: "Barbara Ramos",
         ruolo: "Graphic Designer",
-        foto: "./img/barbara-ramos-graphic-designer.jpg",
+        foto: "barbara-ramos-graphic-designer.jpg",
     }
 ];
 
@@ -67,13 +67,14 @@ const containerToWrite = document.getElementById("main-container");
 for (let i = 0; i < team.length; i++) {
 
     console.log(team[i]);
+
     stringToWrite.innerText += team[i].nome;
     stringToWrite.innerText += team[i].ruolo;
     stringToWrite.innerText += team[i].foto;
 
     containerToWrite.innerHTML += `
-    <div class="card m-3" style="width: 18rem;">
-        <img src="${team[i].foto}">
+    <div class="card m-3">
+        <img src="./img/${team[i].foto}">
             <div class="card-body">
                 <h5 class="card-title">${team[i].nome}</h5>
                     <p class="card-text">${team[i].ruolo}</p>

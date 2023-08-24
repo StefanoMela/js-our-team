@@ -8,8 +8,17 @@
     margin: 0 auto;
 }
 
-img {
+.card {
 
-    max-width: 300px;
-    aspect-ratio: 1;
+    width: calc(100% / 4)
+}
+
+.card h5 {
+
+    font-family: fantasy;
+}
+
+.card p {
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }

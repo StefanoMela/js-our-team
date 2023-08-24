@@ -59,10 +59,16 @@ console.log(team);
 
 // MILESTONE 1
 
+const stringToWrite = document.getElementById("mega-string");
+
 for (let i = 0; i < team.length; i++) {
 
     console.log(team[i]);
+    stringToWrite.innerText += team[i].nome;
+    stringToWrite.innerText += team[i].ruolo;
+    stringToWrite.innerText += team[i].foto;
 };
+
 
 // MILESTONE 2
 

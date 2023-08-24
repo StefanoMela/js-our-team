@@ -57,23 +57,33 @@ const team = [
 
 // MILESTONE 1
 
-console.log(team);
+for (let i in team) {
+    let member = team[i]
+    console.log("Nome: " + member.nome)
+    console.log("Ruolo: " + member.ruolo)
+    console.log("Foto: " + member.foto)
+};
 
 // MILESTONE 2 + BONUS
 
-const stringToWrite = document.getElementById("mega-string");
+const stringContainer = document.getElementById("mega-string");
 const containerToWrite = document.getElementById("main-container");
 
 for (let i = 0; i < team.length; i++) {
 
     console.log(team[i]);
 
-    stringToWrite.innerText += team[i].nome;
-    stringToWrite.innerText += team[i].ruolo;
-    stringToWrite.innerText += team[i].foto;
+    let stringToWrite = document.createElement("div");
+    stringToWrite.innerHTML += `
+        <h4>Nome: ${team[i].nome}</h4>
+        <h5>Ruolo: ${team[i].ruolo}</h5>
+        <span><img src="./img/${team[i].foto}"></span>
+    `
+    stringToWrite.classList.add
+    stringContainer.appendChild(stringToWrite);
 
     containerToWrite.innerHTML += `
-    <div class="card m-3">
+    <div class="card my-5 m-3">
         <img src="./img/${team[i].foto}">
             <div class="card-body">
                 <h5 class="card-title">${team[i].nome}</h5>
@@ -81,31 +91,3 @@ for (let i = 0; i < team.length; i++) {
             </div>
     </div>`
 };
-
-
-// MILESTONE 2.1
-
-const firstMemberName = document.getElementById("first-member-name");
-const firstMemberRole = document.getElementById("first-member-role");
-const firstMemberPic = document.getElementById("first-member-pic");
-
-const secondMemberName = document.getElementById("second-member-name");
-const secondMemberRole = document.getElementById("second-member-role");
-const secondMemberPic = document.getElementById("second-member-pic");
-
-const thirdMemberName = document.getElementById("third-member-name");
-const thirdMemberRole = document.getElementById("third-member-role");
-const thirdMemberPic = document.getElementById("third-member-pic");
-
-firstMemberName.innerText = team[0].nome;
-firstMemberRole.innerText = team[0].ruolo;
-firstMemberPic.innerText = team[0].foto;
-
-secondMemberName.innerText = team[1].nome;
-secondMemberRole.innerText = team[1].ruolo;
-secondMemberPic.innerText = team[1].foto;
-
-thirdMemberName.innerText = team[2].nome;
-thirdMemberRole.innerText = team[2].ruolo;
-thirdMemberPic.innerText = team[2].foto;
-

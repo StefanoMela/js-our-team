@@ -14,35 +14,17 @@
 <body>
     <div class="container-fluid text-center">
         <h1 class="my-4">Meet our Team!</h1>
-        <p id="mega-string"></p>
-        <table class="table table-bordered table-hover my-4">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Ruolo</th>
-                    <th scope="col">Foto</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="first-member">
-                    <td id="first-member-name"></td>
-                    <td id="first-member-role"></td>
-                    <td id="first-member-pic"></td>
-                </tr>
-                <tr>
-                    <td id="second-member-name"></td>
-                    <td id="second-member-role"></td>
-                    <td id="second-member-pic"></td>
-                </tr>
-                <tr>
-                    <td id="third-member-name"></td>
-                    <td id="third-member-role"></td>
-                    <td id="third-member-pic"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="mega-string" class="d-flex flex-wrap"></div>
         <div class="container d-flex flex-wrap justify-content-center" id="main-container"></div>
     </div>
 </body>
 
 </html>
+
+
+for (let i in team) {
+    let member = team[i]
+    console.log("Nome: " + member.nome)
+    console.log("Ruolo: " + member.ruolo)
+    console.log("Foto: " + member.foto)
+};
